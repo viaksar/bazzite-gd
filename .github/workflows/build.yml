@@ -12,6 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build Image
-        uses: ublue-os/bluebuild@v2
+        uses: ublue-os/build-image-action@main
         with:
           containerfile: Containerfile
