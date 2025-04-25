@@ -1,3 +1,24 @@
-# Custom Bazzite Handheld Image
+# bazzite-gd
 
-Includes Unity Hub, Brave, VS Code, Clang, GNOME Screensaver.
+Custom build [Bazzite Handheld](https://github.com/ublue-os/bazzite), based on GHCR-imageе, with packages:
+- Unity Hub
+- Brave Browser
+- Visual Studio Code
+- gdb, clang
+- GNOME Screensaver
+
+## Using
+
+1. Go to this build:
+
+   ```bash
+   sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/viaksar/bazzite-gd:latest
+   ```
+
+2. Update:
+
+   ```bash
+   rpm-ostree update
+   ```
+
+Image automatically rebuild through GitHub Actions.

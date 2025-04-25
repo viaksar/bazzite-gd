@@ -1,17 +1,18 @@
 name: Build Image
-
 on:
   push:
-    branches:
-      - main
-
+    branches: [ main ]
+  schedule:
+    - cron: '0 3 * * 1'
 jobs:
   build:
-    name: Build and Push
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Build Image
-        uses: ublue-os/build-image-action@main
+      - name: Build and Push Image
+        uses: ublue-os/build-image-action@v2
         with:
           containerfile: Containerfile
+          image-name: bazzite-gd
+          registry: ghcr.io
+          registry-user: viaksar
